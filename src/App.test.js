@@ -16,9 +16,9 @@ describe('App', () => {
     fetchData.mockImplementation(() => ({
       then(fn) {
         fn({
-          firstName: 'Yaser',
-          lastName: 'Syed',
-          nickName: 'Farhan',
+          firstName: 'Jon',
+          lastName: 'Doe',
+          nickName: 'JD',
         });
       },
     }));
@@ -27,6 +27,6 @@ describe('App', () => {
       component = mount(<App />);
     });
 
-    expect(component.text()).toBe('Hi Yaser Syed Farhan!');
+    expect(component.text()).toBe('Hi Jon Doe JD!');
   });
 });
