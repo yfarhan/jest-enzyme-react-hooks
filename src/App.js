@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import fetchData from './fetchData';
 
-function App() {
+const App = () => {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetchData().then(setData);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data ? (
+        <h2>
+          Hi {data.firstName} {data.lastName} {data.nickName}!
+        </h2>
+      ) : (
+        'No data yet'
+      )}
     </div>
   );
-}
+};
 
 export default App;
