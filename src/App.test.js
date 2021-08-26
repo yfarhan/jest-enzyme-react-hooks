@@ -5,7 +5,7 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
-import App from './app';
+import App from './App';
 
 import fetchData from './fetchData';
 jest.mock('./fetchData');
