@@ -1,9 +1,9 @@
 const fetchData = () =>
   new Promise(function (res) {
     const data = {
-      firstName: 'Yaser',
-      lastName: 'Syed',
-      nickName: 'Farhan',
+      firstName: 'fname',
+      lastName: 'lname',
+      nickName: 'F',
     };
 
     setTimeout(() => res(data), 1000);

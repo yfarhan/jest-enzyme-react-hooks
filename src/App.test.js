@@ -13,6 +13,7 @@ jest.mock('./fetchData');
 describe('App', () => {
   test('should fetch data on mount', () => {
     let component;
+
     fetchData.mockImplementation(() => ({
       then(fn) {
         fn({
